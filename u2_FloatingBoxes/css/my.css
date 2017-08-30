@@ -1,0 +1,33 @@
+.box
+{
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  padding: 5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  float: left;
+}
+
+.box-container::after
+{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.color1
+{
+  background: pink;
+}
+
+.color2
+{
+  background: violet;
+}
+
+.color3
+{
+  background: lightseagreen;
+}
