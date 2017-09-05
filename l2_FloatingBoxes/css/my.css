@@ -1,0 +1,37 @@
+.box {
+  width: 240px;
+  height: 180px;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  margin: 10px;
+  float: left;
+}
+
+/*clearfix
+containers of floating elements should have a clearfix*/
+.box-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.box-container {
+  /*background-color: lightgrey;*/
+}
+
+.color1 {
+  background-color: lightgreen;
+}
+
+.color2 {
+  background-color: lightblue;
+}
+
+.color3 {
+  background-color: lightyellow;
+}
+
+.code {
+  font-family: Courier New;
+}

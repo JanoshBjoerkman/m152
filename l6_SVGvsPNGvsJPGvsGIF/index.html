@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/my.css" />
+    <title>Playground Modul 152</title>
+  </head>
+
+  <body>
+    <h1 class="myh1">
+      SVG vs PNG vs JPG vs GIF
+    </h1>
+
+    <button
+      type="button"
+      onclick="changeBgColor('white')">
+        <h3>Hintergrund weiss</h3>
+    </button>
+    <button
+      type="button"
+      onclick="changeBgColor('lightyellow')">
+        <h3>Hintergrund gelb</h3>
+    </button>
+
+    <div class="gallery" id="gallery1">
+      <div class="imagebox">
+        <img src="img/cag.svg" alt="SVG">
+        <div class="caption">
+          <h2>SVG</h2>
+          <ul>
+            <li>
+              Dateigrösse: 5 KB
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="imagebox">
+        <img src="img/cag-960.png" alt="PNG">
+        <div class="caption">
+          <h2>PNG</h2>
+          <ul>
+            <li>
+              Dateigrösse: 27 KB
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="imagebox">
+        <img src="img/cag-100.jpg" alt="JPG 100">
+        <div class="caption">
+          <h2>JPG Qualität 100%</h2>
+          <ul>
+            <li>
+              Dateigrösse: 112 KB
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="imagebox">
+        <img src="img/cag-90.jpg" alt="JPG 90">
+        <div class="caption">
+          <h2>JPG Qualität 90%</h2>
+          <ul>
+            <li>
+              Dateigrösse: 41 KB
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="imagebox">
+        <img src="img/cag-50.jpg" alt="JPG 50">
+        <div class="caption">
+          <h2>JPG Qualität 50%</h2>
+          <ul>
+            <li>
+              Dateigrösse: 22 KB
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="imagebox">
+        <img src="img/cag-30.jpg" alt="JPG 30">
+        <div class="caption">
+          <h2>JPG Qualität 30%</h2>
+          <ul>
+            <li>
+              Dateigrösse: 18 KB
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="imagebox">
+        <img src="img/cag.gif" alt="GIF">
+        <div class="caption">
+          <h2>GIF</h2>
+          <ul>
+            <li>
+              Dateigrösse: 21 KB
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- My JS-file -->
+    <script src="js/my.js"></script>
+
+  </body>
+</html>

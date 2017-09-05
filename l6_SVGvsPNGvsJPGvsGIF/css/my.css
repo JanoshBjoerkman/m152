@@ -1,0 +1,34 @@
+
+
+img {
+  height: 300px;
+}
+
+.caption {
+  margin: 5px;
+  padding: 10px;
+}
+
+.caption h2 {
+  text-align: left;
+}
+
+.gallery {
+  width: 100%;
+  background-color: white;
+}
+.gallery::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.imagebox {
+  width: auto;
+  height: 500px;
+  border-style: none;
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+}
