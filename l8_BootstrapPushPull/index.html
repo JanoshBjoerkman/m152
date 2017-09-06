@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--CDN (content delivery network) for bootstrap css  -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--Optional themes  -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="css/my.css" />
+
+    <title>Bootstrap: Push - Pull</title>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- first row outer grid -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Bootstrap: Push - Pull</h1>
+        </div>
+      </div>
+
+      <!-- second row-->
+      <div class="row">
+        <div class="col-xs-12 bg-warning box">
+          <div id="box1">Box 1</div>
+        </div>
+      </div>
+
+      <!-- third row -->
+      <div class="row">
+
+        <!-- middle box - for md viewports pushed 2 columns to the right -->
+        <div class="col-xs-12 col-md-8 col-md-push-2 bg-danger box">
+            <div id="box6">Box 6</div>
+        </div>
+
+        <!-- left banner - for md vieports pulled 8 columns to the left-->
+        <div class="col-xs-6 col-md-2 bg-success col-md-pull-8 box">
+          <div id="box2" class="banner">Box 2</div>
+        </div>
+
+        <!-- right banner -->
+        <div class="col-xs-6 col-md-2 bg-success box">
+          <div id="box3" class="banner">Box 3</div>
+        </div>
+      </div>
+
+      <!-- fourth row -->
+      <div class="row">
+        <div class="col-xs-12 bg-info box">
+          <div id="box4">Box 4</div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!--CDN for jQuery  -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+    <!-- CDN for latest JS -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+
+  </body>
+</html>

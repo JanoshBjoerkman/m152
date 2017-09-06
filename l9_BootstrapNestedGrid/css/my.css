@@ -1,0 +1,32 @@
+.box {
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+
+}
+
+.gallery-box {
+  /* Just for visualizing empty boxes. If a box is filled with content, the height-statement has to be removed.*/
+  height: 72px;
+}
+
+#box1 {
+  /* Just for visualizing empty boxes. If a box is filled with content, the height-statement has to be removed.*/
+  height: 60px;
+}
+
+#box4 {
+  /* Just for visualizing empty boxes. If a box is filled with content, the height-statement has to be removed.*/
+  height: 60px;
+}
+
+#box5 {
+  /* Just for visualizing empty boxes. If a box is filled with content, the height-statement has to be removed.*/
+  height: 48px;
+}
+
+.banner {
+  /* Just for visualizing empty boxes. If a box is filled with content, the height-statement has to be removed.*/
+  height: 180px;
+}

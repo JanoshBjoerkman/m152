@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--CDN (content delivery network) for bootstrap css  -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--Optional themes  -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="css/my.css" />
+
+    <title>Bootstrap Nested Grid</title>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- first row outer grid -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Bootstrap: Nested Grid</h1>
+        </div>
+      </div>
+
+      <!-- second row outer grid -->
+      <div class="row">
+        <div class="col-xs-12 bg-warning box">
+          <div id="box1">Box 1</div>
+        </div>
+      </div>
+
+      <!-- third row outer grid -->
+      <div class="row">
+
+        <!-- gallery - for md viewport pushed 2 columns to the right -->
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+
+          <!-- first innner row - start of inner grid -->
+          <div class="row">
+
+            <div class="col-xs-6 col-md-4 col-lg-2 bg-danger box">
+                <div class="gallery-box">Gallery-Box 1</div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-2 bg-danger box">
+                <div class="gallery-box">Gallery-Box 2</div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-2 bg-danger box">
+                <div class="gallery-box">Gallery-Box 3</div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-2 bg-danger box">
+                <div class="gallery-box">Gallery-Box 4</div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-2 bg-danger box">
+                <div class="gallery-box">Gallery-Box 5</div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-2 bg-danger box">
+                <div class="gallery-box">Gallery-Box 6</div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-2 bg-danger box">
+                <div class="gallery-box">Gallery-Box 7</div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-2 bg-danger box">
+                <div class="gallery-box">Gallery-Box 8</div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-2 bg-danger box">
+                <div class="gallery-box">Gallery-Box 9</div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-2 bg-danger box">
+                <div class="gallery-box">Gallery-Box 10</div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-2 bg-danger box">
+                <div class="gallery-box">Gallery-Box 11</div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-2 bg-danger box">
+                <div class="gallery-box">Gallery-Box 12</div>
+            </div>
+
+          </div>
+          <!-- end of first innner row -->
+
+          <div class="row">
+            <div class="col-xs-12 bg-primary box">
+              <div id="box5" >Box 5</div>
+            </div>
+          </div>
+          <!-- end of second inner row - end of inner grid -->
+
+        </div>
+
+        <!-- left banner - for md vieports pulled 8 columns (to the left)-->
+        <div class="col-xs-6 col-md-2 bg-success col-md-pull-8 box">
+          <div id="box2" class="banner">Box 2</div>
+        </div>
+
+
+        <div class="col-xs-6 col-md-2 bg-success box">
+          <div id="box3" class="banner">Box 3</div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 bg-info box">
+          <div id="box4">Box 4</div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--CDN for jQuery  -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+    <!-- CDN for latest JS -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+
+  </body>
+</html>
