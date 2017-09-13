@@ -1,0 +1,25 @@
+h1 {
+  font-size: 18pt;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*clearfix of containing container holding floating elements*/
+.audiogrid::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.audiobox {
+  width: 240px;
+  height: 180px;
+  border-style: solid;
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+}
