@@ -11,3 +11,7 @@ body {
   height: 400px;
   width: 100%;
 }
+.contact_form_wrapper {
+  margin-left: 10px;
+  margin-right: 10px;
+}
