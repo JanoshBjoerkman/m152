@@ -42,12 +42,12 @@ $(document).ready(function(){
       var mapOptions = {
         zoom: 10,
         center: new google.maps.LatLng(47.567827, 9.1212743),
-        panControl: false,
+        /*panControl: false,
         disableDefaultUI: true,
         zoomControl: true,
         scrollwheel: false,
         panControl: false,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        mapTypeId: google.maps.MapTypeId.ROADMAP*/
       };
       map = new google.maps.Map(document.getElementById('map'), mapOptions);
     
