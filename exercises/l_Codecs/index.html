@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--CDN (content delivery network) for bootstrap css  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--Optional themes  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+    <!-- awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="css/my.css" />
+
+    <title>Video-Beispiele</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <h3 class="col-xs-12">
+                Videoformate - Beispiele <small>Anwendung von <code>ffmpeg</code></small>
+            </h3>
+        </div>
+
+        <div class="row">
+
+            <!-- video 1 (Original) -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <video class="embed-responsive-item" src="vid/sintel.mp4" controls poster="img/sintel-poster.jpg">
+              </video>
+                        </div>
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th>Original</th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Format / Container</th>
+                                <td>MP4</td>
+                            </tr>
+                            <tr>
+                                <th>Audio-Codec</th>
+                                <td>AAC</td>
+                            </tr>
+                            <tr>
+                                <th>Video-Codec</th>
+                                <td>H.264</td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>2048x872</td>
+                            </tr>
+                            <tr>
+                                <th>Mediainfo (Beispiel)</th>
+                                <td><code>ffmpeg -i sintel.mp4</code></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- video 2 - 720p -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <video class="embed-responsive-item" src="vid/sintel-720p.mp4" controls poster="img/sintel-poster.jpg">
+              </video>
+                        </div>
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th>Auflösung 1280x720 - MP4</th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Format / Container</th>
+                                <td>MP4</td>
+                            </tr>
+                            <tr>
+                                <th>Audio-Codec</th>
+                                <td>AAC</td>
+                            </tr>
+                            <tr>
+                                <th>Video-Codec</th>
+                                <td>H.264</td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>1280x720</td>
+                            </tr>
+                            <tr>
+                                <th>Transcoding</th>
+                                <td><code>ffmpeg -i sintel.mp4 -vf scale=1280:720 -strict -2 sintel-720p.mp4</code></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <!-- video 3 - ogg -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <video class="embed-responsive-item" src="vid/sintel.ogg" controls poster="img/sintel-poster.jpg">
+              </video>
+                        </div>
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th>Ogg</th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Format / Container</th>
+                                <td>Ogg</td>
+                            </tr>
+                            <tr>
+                                <th>Audio-Codec</th>
+                                <td>Vorbis</td>
+                            </tr>
+                            <tr>
+                                <th>Video-Codec</th>
+                                <td>Theora</td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>2048x872</td>
+                            </tr>
+                            <tr>
+                                <th>Mediainfo (Beispiel)</th>
+                                <td><code>ffmpeg -i sintel.mp4 sintel.ogg</code></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- video 3 - webm -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <video class="embed-responsive-item" src="vid/sintel.webm" controls poster="img/sintel-poster.jpg">
+              </video>
+                        </div>
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th>WebM</th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Format / Container</th>
+                                <td>WebM</td>
+                            </tr>
+                            <tr>
+                                <th>Audio-Codec</th>
+                                <td>Opus</td>
+                            </tr>
+                            <tr>
+                                <th>Video-Codec</th>
+                                <td>VP9</td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>2048x872</td>
+                            </tr>
+                            <tr>
+                                <th>Mediainfo (Beispiel)</th>
+                                <td><code>ffmpeg -i sintel.mp4 sintel.webm</code></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <!-- video 3 - ogg with audio-codec opus-->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <video class="embed-responsive-item" src="vid/sintel-opus.ogg" controls poster="img/sintel-poster.jpg">
+              </video>
+                        </div>
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th>Ogg mit Opus-Codec</th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Format / Container</th>
+                                <td>Ogg</td>
+                            </tr>
+                            <tr>
+                                <th>Audio-Codec</th>
+                                <td>Opus</td>
+                            </tr>
+                            <tr>
+                                <th>Video-Codec</th>
+                                <td>Theora</td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>2048x872</td>
+                            </tr>
+                            <tr>
+                                <th>Mediainfo (Beispiel)</th>
+                                <td><code>ffmpeg -i sintel.mp4 -c:a libopus sintel.ogg</code></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- video 4 - ogg better quality-->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <video class="embed-responsive-item" src="vid/sintel-high.ogg" controls poster="img/sintel-poster.jpg">
+              </video>
+                        </div>
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th>Ogg - gute Qualität</th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Format / Container</th>
+                                <td>Ogg</td>
+                            </tr>
+                            <tr>
+                                <th>Audio-Codec</th>
+                                <td>Vorbis</td>
+                            </tr>
+                            <tr>
+                                <th>Video-Codec</th>
+                                <td>Theora</td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>2048x872</td>
+                            </tr>
+                            <tr>
+                                <th>Mediainfo (Beispiel)</th>
+                                <td><code>ffmpeg -i sintel.mp4 -q:v 10  sintel-high.ogg</code></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--CDN for jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+    <!-- CDN for latest JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+
+</body>
+
+</html>
