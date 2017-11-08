@@ -42,9 +42,9 @@
                             </td>
                             <td>
                                 <ul class="list-group">
-                                    <li class="list-group-item">MPEG-H Part 2</li>
-                                    <li class="list-group-item">MPEG-4 Part 10</li>
-                                    <li class="list-group-item">MPEG-4 Part 2</li>
+                                    <li class="list-group-item change" data-answer="MPEG-H Part 2">?</li>
+                                    <li class="list-group-item change" data-answer="MPEG-4 Part 10">?</li>
+                                    <li class="list-group-item change" data-answer="MPEG-4 Part 2">?</li>
                                 </ul>
                             </td>
                         </tr>
