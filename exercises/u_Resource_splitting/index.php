@@ -30,14 +30,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>MP4</td>
-                            <td>.mp4</td>
-                            <td>video/mp4</td>
+                            <td class="change" data-answer="MP4">?</td>
+                            <td class="change" data-answer=".mp4">?</td>
+                            <td class="change" data-answer="video/mp4MP4">?</td>
                             <td>
                                 <ul class="list-group">
-                                    <li class="list-group-item">MPEG-4 Part 3</li>
-                                    <li class="list-group-item">AAC</li>
-                                    <li class="list-group-item">MP3</li>
+                                    <li class="list-group-item change" data-answer="MPEG-4 Part 3">?</li>
+                                    <li class="list-group-item change" data-answer="AAC">?</li>
+                                    <li class="list-group-item change" data-answer="MP3">?</li>
                                 </ul>
                             </td>
                             <td>
@@ -94,6 +94,9 @@
                         </tr>
                     </tbody>
                 </table>
+                
+                <button type="button" class="btn btn-primary change" id="showAnswer" data-answer="restart">show answer</button>
+                
             </div>
         </div>
     </div>
