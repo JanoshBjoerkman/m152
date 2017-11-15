@@ -1,0 +1,5 @@
+.box {
+
+  /* Just for visualizing empty boxes. If a box is filled with content, the height-statement has to be removed.*/
+  height: 180px;
+}
