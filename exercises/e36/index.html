@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--CDN (content delivery network) for bootstrap css  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--Optional themes  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+    <!-- awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="/e23/css/my.css" />
+
+    <title>Bildbearbeitung mit imagemagick</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <h1 class="col-xs-12">
+                Bildbearbeitung mit <em>imagemagick</em> <small>Anwendung von <code>convert</code></small>
+            </h1>
+        </div>
+        <div class="row">
+            <h2 class="col-xs-12">
+                <a href="https://www.imagemagick.org/script/index.php">Website <em>imagemagick</em></a>
+            </h2>
+        </div>
+
+        <div class="row">
+
+            <!-- Bild 0 (Original) -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c0.png" class="img-responsive" alt="Bild0" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td>
+                                    <p><code>identify c0.png</code></p>
+                                    <p><code>identify -verbose c0.png</code></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>2400x2400</td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td>PNG</td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td>Gibt Infos zum Bild</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bild 1-->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c1.jpg" class="img-responsive" alt="Bild1" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td><code>convert c0.png c1.jpg</code></td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>2400x2400</td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td>JPEG</td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td>Konvertiert Bild</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <!-- Bild 2 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c2.jpg" class="img-responsive" alt="Bild2" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td><code>convert 0.png -background lightgrey -alpha remove c2.jpg</code></td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>2400x2400</td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td>JPEG</td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td>Setzt graue Hintergrundfarbe, entfernt transparenten Hintergrund</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Bild 11 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c11.png" class="img-responsive" alt="Bild11" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td><code>convert c0.png -quantize GRAY -colors 256 c11.png</code></td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>2400x2400</td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td>PNG</td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td>Generiert Graustufe aus Bild</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <!-- Bild 3 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c3.png" class="img-responsive" alt="Bild3" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td><code>convert c0.png -resize 1200x900 c3.png</code></td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>900x900</td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td>PNG</td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td>Skaliert Bildauflösung anhand des kleineren Wertes</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bild 4 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c4.png" class="img-responsive" alt="Bild4" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td><code>convert c0.png -resize 1200x900^ c4.png</code></td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>1200x1200</td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td>PNG</td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td>Skaliert Bildauflösung anhand des grösseren Wertes</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <!-- Bild 5 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c5.png" class="img-responsive" alt="Bild5" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td><code>convert c0.png -resize 1200x900\! c5.png</code></td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td>1200x900</td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td>PNG</td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td>Skaliert Bildauflösung auf genau die spezifizierte Auflösung</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Bild 6 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c6.png" class="img-responsive" alt="Bild3" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td><code>convert c0.png -crop 1200x900+600+300 c6.png</code></td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td>Offset von der linken oberen Ecke. Ausschnitt von 1200x900 vom Original</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <!-- Bild 7 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c7.png" class="img-responsive" alt="Bild4" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td><code>convert c0.png -gravity center -crop 1200x900+0+0 c7.png</code></td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td>Ausschnitt von 1200x900 vom Original von der Mitte aus.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bild 8 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c8.png" class="img-responsive" alt="Bild5" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td><code>convert c0.png -gravity center -crop 1200x900+600+300 c8.png</code></td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td>Platziert Ausschnitt in der Mitte, danach ein Offset</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <!-- Bild 9 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c9.png" class="img-responsive" alt="Bild4" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td><code>convert c0.png -resize 900x900^ -gravity center -crop 900x900+0+0 c9.png</code></td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bild 10 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c10.png" class="img-responsive" alt="Bild5" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td><code>convert c0.png -resize 1200x900^ -gravity center -crop 1200x900+0+0 c10.png</code></td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <!-- Bild 12 -->
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/c12.png" class="img-responsive" alt="Bild11" width="320" height="320">
+                    </div>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tr>
+                                <th>Command</th>
+                                <td><code>convert c0.png -resize 1200x900^ -gravity center -crop 1200x900+0+0 -quantize GRAY -colors 256 c12.png</code></td>
+                            </tr>
+                            <tr>
+                                <th>Auflösung</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Format</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    </div>
+
+
+
+    <!--CDN for jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+    <!-- CDN for latest JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+
+</body>
+
+</html>
