@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Proposal</title>
+    <title>Spots</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -16,42 +16,40 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
-                <a class="navbar-brand" href="http://m152/stuff/proposal/">
-                        Logo
-                    </a>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="index.html">Logo</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="http://m152/stuff/proposal/">Impressions</a></li>
-                    <li class="active"><a href="http://m152/stuff/proposal/spots.html">Spots</a></li>
-                    <li><a href="http://m152/stuff/proposal/shops.html">Shops</a></li>
-                    <li><a href="http://m152/stuff/proposal/about.html">About</a></li>
-                    <li><a href="http://m152/stuff/proposal/contact.html">Contact</a></li>
+                    <li><a href="">Impressions</a></li>
+                    <li class="active"><a href="spots.html">Spots</a></li>
+                    <li><a href="shops.html">Shops</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container-fluid">
-        <div class="panel-group">
+        <div class="panel-group" id="accordion_sk8parks">
             <!--Skatepark Frauenfeld-->
             <div class="panel panel-default" id="skatepark-ff">
                 <div class="panel-heading">
                     <h4>Skatepark Frauenfeld</h4>
-                    <a data-toggle="collapse" data-target="#collapse-skatepark-ff" href="#collapse-skatepark-ff" class="collapsed">more</a>
+                    <a data-toggle="collapse" data-parent="#accordion_sk8parks" data-target="#collapse-skatepark-ff" href="#collapse-skatepark-ff" class="collapsed">more</a>
                 </div>
                 <div id="collapse-skatepark-ff" class="panel-collapse collapse">
                     <div class="panel-body">
                         <p>minibowl, bowl, downrail, long ledge, flatrail, bank, waterfall</p>
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <div id="carousel_sk8park_ff" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#carousel_sk8park_ff" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel_sk8park_ff" data-slide-to="1"></li>
                             </ol>
 
                             <!-- Wrapper for slides -->
@@ -72,11 +70,11 @@
                             </div>
 
                             <!-- Left and right controls -->
-                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <a class="left carousel-control" href="#carousel_sk8park_ff" data-slide="prev">
                                 <span class="glyphicon glyphicon-chevron-left"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <a class="right carousel-control" href="#carousel_sk8park_ff" data-slide="next">
                                 <span class="glyphicon glyphicon-chevron-right"></span>
                                 <span class="sr-only">Next</span>
                             </a>
@@ -111,7 +109,7 @@
             <div class="panel panel-default" id="skatepark-weinfelden">
                 <div class="panel-heading">
                     <h4>Skatepark Weinfelden</h4>
-                    <a data-toggle="collapse" data-target="#collapse-skatepark-weinfelden" href="#collapse-skatepark-weinfelden" class="collapsed">more</a>
+                    <a data-toggle="collapse" data-parent="#accordion_sk8parks" data-target="#collapse-skatepark-weinfelden" href="#collapse-skatepark-weinfelden" class="collapsed">more</a>
                 </div>
                 <div id="collapse-skatepark-weinfelden" class="panel-collapse collapse">
                     <div class="panel-body">
@@ -123,7 +121,7 @@
             <div class="panel panel-default" id="skillspark-winterthur">
                 <div class="panel-heading">
                     <h4>Skillspark Winterthur</h4>
-                    <a data-toggle="collapse" data-target="#collapse-skillspark-winterthur" href="#collapse-skillspark-winterthur" class="collapsed">more</a>
+                    <a data-toggle="collapse" data-parent="#accordion_sk8parks" data-target="#collapse-skillspark-winterthur" href="#collapse-skillspark-winterthur" class="collapsed">more</a>
                 </div>
                 <div id="collapse-skillspark-winterthur" class="panel-collapse collapse">
                     <div class="panel-body">
@@ -135,7 +133,7 @@
             <div class="panel panel-default" id="schulhaus-pfyn">
                 <div class="panel-heading">
                     <h4>Schulhaus Pfyn</h4>
-                    <a data-toggle="collapse" data-target="#collapse-schulhaus-pfyn" href="#collapse-schulhaus-pfyn" class="collapsed">more</a>
+                    <a data-toggle="collapse" data-parent="#accordion_sk8parks" data-target="#collapse-schulhaus-pfyn" href="#collapse-schulhaus-pfyn" class="collapsed">more</a>
                 </div>
                 <div id="collapse-schulhaus-pfyn" class="panel-collapse collapse">
                     <div class="panel-body">
