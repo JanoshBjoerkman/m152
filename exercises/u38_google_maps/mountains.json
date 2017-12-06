@@ -1,0 +1,110 @@
+﻿[
+ {
+   "id": "eig",
+   "name": "Eiger",
+   "el": 3967,
+   "longitude": 8.005382,
+   "latitude": 46.577555,
+   "url": "/e4/pages/eiger.php",
+   "mountainrailway": "no"
+ },
+ {
+   "id": "mge",
+   "name": "Monte Generoso",
+   "el": 1701,
+   "longitude": 9.020156,
+   "latitude": 45.931455,
+   "url": "/e4/pages/generoso.php",
+   "mountainrailway": "yes"
+ },
+ {
+   "id": "mat",
+   "name": "Matterhorn",
+   "el": 4477,
+   "longitude": 7.658434,
+   "latitude": 45.976653,
+   "url": "/e4/pages/matterhorn.php",
+   "mountainrailway": "no"
+ },
+ {
+   "id": "bri",
+   "name": "Bristen",
+   "el": 3073,
+   "longitude": 8.681283,
+   "latitude": 46.73697,
+   "url": "/e4/pages/bristen.php",
+   "mountainrailway": "no"
+ },
+ {
+   "id": "nie",
+   "name": "Niederhorn",
+   "el": 1963,
+   "longitude": 7.775339,
+   "latitude": 46.711302,
+   "url": "/e4/pages/niederhorn.php",
+   "mountainrailway": "yes"
+ },
+ {
+   "id": "pbe",
+   "name": "Piz Bernina",
+   "el": 4049,
+   "longitude": 9.908117,
+   "latitude": 46.382328,
+   "url": "/e4/pages/pizbernina.php",
+   "mountainrailway": "no"
+ },
+ {
+   "id": "rig",
+   "name": "Rigi",
+   "el": 1798,
+   "longitude": 8.485215,
+   "latitude": 47.056731,
+   "url": "/e4/pages/rigi.php",
+   "mountainrailway": "yes"
+ },
+ {
+   "id": "san",
+   "name": "Säntis",
+   "el": 2502,
+   "longitude": 9.343259,
+   "latitude": 47.249403,
+   "url": "/e4/pages/santis.php",
+   "mountainrailway": "yes"
+ },
+ {
+   "id": "tit",
+   "name": "Titlis",
+   "el": 3238,
+   "longitude": 8.437769,
+   "latitude": 46.772067,
+   "url": "/e4/pages/titlis.php",
+   "mountainrailway": "yes"
+ },
+ {
+   "id": "tod",
+   "name": "Tödi",
+   "el": 3614,
+   "longitude": 8.914868,
+   "latitude": 46.811151,
+   "url": "/e4/pages/todi.php",
+   "mountainrailway": "no"
+ },
+ {
+   "id": "tsh",
+   "name": "Tschingelhörner",
+   "el": 2849,
+   "longitude": 9.221249,
+   "latitude": 46.898255,
+   "url": "/e4/pages/tschingelhorner.php",
+   "mountainrailway": "no"
+ },
+ {
+   "id": "uet",
+   "name": "Uetliberg",
+   "el": 870,
+   "longitude": 8.49205,
+   "latitude": 47.349499,
+   "url": "/e4/pages/uetliberg.php",
+   "mountainrailway": "yes"
+ }
+]
