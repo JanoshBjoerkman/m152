@@ -1,13 +1,12 @@
-// copy+paste from: https://stackoverflow.com/questions/27816682/setting-google-maps-api-v3-zoom-level-based-on-screen-device-width
+// inspiration from: https://stackoverflow.com/questions/27816682/setting-google-maps-api-v3-zoom-level-based-on-screen-device-width
 $(document).ready(function() {
+    myMap();
+});
+
+function myMap() {
     var map;
     var bounds = new google.maps.LatLngBounds();
-    var locations = [
-        ['<a target="_blank" href="https://doodah.ch/de/stores/winterthur-outlet">Dodaah Outlet Winterthur</a>', 47.498343, 8.724216, 1],
-        ['<a target="_blank" href="https://www.facebook.com/skateshop.konstanz">Frontline Skateshop</a>', 47.663631, 9.175234, 2],
-        ['<a target="_blank" href="https://skate.ch/shop/">Skate.ch</a>', 47.4943893, 8.8953086, 3],
-        ['<a target="_blank" href="https://www.cloud-9.ch/">Cloud 9 Distribution AG</a>', 47.439533, 8.5702541, 4]
-    ];
+    var locations = getLocations();
 
     function bindInfoWindow(marker, map, infowindow, strDescription) {
         google.maps.event.addListener(marker, 'click', function() {
@@ -55,4 +54,14 @@ $(document).ready(function() {
     google.maps.event.addDomListener(window, 'load', initialize);
     google.maps.event.addDomListener(window, 'resize', initialize);
     window.onpopstate = initialize();
-});
+}
+
+function getLocations() {
+    var locations = [
+        ['<a target="_blank" href="https://doodah.ch/de/stores/winterthur-outlet">Dodaah Outlet Winterthur</a>', 47.498343, 8.724216, 1],
+        ['<a target="_blank" href="https://www.facebook.com/skateshop.konstanz">Frontline Skateshop</a>', 47.663631, 9.175234, 2],
+        ['<a target="_blank" href="https://skate.ch/shop/">Skate.ch</a>', 47.4943893, 8.8953086, 3],
+        ['<a target="_blank" href="https://www.cloud-9.ch/">Cloud 9 Distribution AG</a>', 47.439533, 8.5702541, 4]
+    ];
+    return locations;
+}

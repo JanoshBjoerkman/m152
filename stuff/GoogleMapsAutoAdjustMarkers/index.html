@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Auto adjusted markers - GoogleMaps</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://use.fontawesome.com/272ee0e17c.js"></script>
+    <!-- own css -->
+    <link rel="stylesheet" href="my.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="page-header">
+                    <h1><i class="fa fa-map-marker pull-left" aria-hidden="true"></i>GoogleMaps Tutorial <small class="col-xs-12-">dynamische Kartenmarker</small></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Code</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <ul class="list-group">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-group-item">
+                                        <h4>Schritt 1: API einrichten</h4>
+                                        <p>GoogleMaps API Key erstellen.
+                                            <a target="_blank" href="https://developers.google.com/maps/documentation/javascript/?hl=de">Hier</a> mit Ihrem Google-Konto anmelden, auf <em>Schlüssel anfordern</em> klicken und die Anweisungen befolgen.
+                                        </p>
+                                        <p>API in Ihr HTML-File, bevor der <em>body</em> Tag geschlossen wird, einbinden.</p>
+                                        <p><code>&lt;script src=&#34;https://maps.googleapis.com/maps/api/js?key=YOURAPIKEY&#34;&gt;&lt;/script&gt;</code></p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-group-item">
+                                        <h4>Schritt 2:</h4>
+                                        <p></p>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Resultat</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="embed-responisve embed-responsive-16by9">
+                            <div class="embed-responsive-item">
+                                <div class="map-container">
+                                    <div id="map"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- GoogleMaps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWXeLgLfqYwjOfmoWBSTpOVJOPHviEn2g"></script>
+    <!-- own JS -->
+    <script src="custom.js"></script>
+</body>
+
+</html>
