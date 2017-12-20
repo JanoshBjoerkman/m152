@@ -48,10 +48,124 @@
                                         </p>
                                         <p>API in Ihr HTML-File, bevor der <em>body</em> Tag geschlossen wird, einbinden.</p>
                                         <p><code>&lt;script src=&#34;https://maps.googleapis.com/maps/api/js?key=YOURAPIKEY&#34;&gt;&lt;/script&gt;</code></p>
+                                        <p>Wie sie ihr JS einbinden sezte ich voraus ;)</p>
+                                        <p>PS: Nutzen Sie jQuery</p>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-group-item">
-                                        <h4>Schritt 2:</h4>
-                                        <p></p>
+                                        <h4>Schritt 2: Eventlistener hinzufügen</h4>
+                                        <p>jQuery soll nach dem Laden der Seite die Map initialiseren</p>
+                                        <p>
+                                            <pre>$(document).ready(function() {
+    myMap();
+});</pre>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-group-item">
+                                        <h4>Schritt 3: Locations definieren</h4>
+                                        <p>Ein Element im Array <code>locations</code> beinhaltet vier "Parameter":</p>
+                                        <ul class="list-unstyled">
+                                            <ul>
+                                                <li>Einen String mit dem Link auf die Webseite -> dient als Beschreibung</li>
+                                                <li>Latitude</li>
+                                                <li>Longitude</li>
+                                                <li>Index-Nummer (um welche Location handelt es sich)</li>
+                                            </ul>
+                                        </ul>
+                                        <p>
+                                            <pre>
+function getLocations() {
+    var locations = [
+        ['&lt;a target=&quot;_blank&quot; href=&quot;https://doodah.ch/de/stores/winterthur-outlet&quot;&gt;Dodaah Outlet Winterthur&lt;/a&gt;', 47.498343, 8.724216, 1],
+        ['&lt;a target=&quot;_blank&quot; href=&quot;https://www.facebook.com/skateshop.konstanz&quot;&gt;Frontline Skateshop&lt;/a&gt;', 47.663631, 9.175234, 2],
+        ['&lt;a target=&quot;_blank&quot; href=&quot;https://skate.ch/shop/&quot;&gt;Skate.ch&lt;/a&gt;', 47.4943893, 8.8953086, 3],
+        ['&lt;a target=&quot;_blank&quot; href=&quot;https://www.cloud-9.ch/&quot;&gt;Cloud 9 Distribution AG&lt;/a&gt;', 47.439533, 8.5702541, 4]
+    ];
+    return locations;
+}</pre>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-group-item">
+                                        <h4>Schritt 4: Variablen definieren</h4>
+                                        <p>
+                                            <pre>
+function myMap() {
+    var map;
+    var bounds = new google.maps.LatLngBounds();
+    var locations = getLocations();
+</pre>
+                                        </p>
+                                        <p><code>locations</code> wird der vorhin definierte Array zugewiesen.</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-group-item">
+                                        <h4>Schritt 5: Info-Fenster generieren</h4>
+                                        <p>
+                                            <pre>      
+function bindInfoWindow(marker, map, infowindow, strDescription) {
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(strDescription);
+        infowindow.open(map, marker);
+    });
+}         
+</pre>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-group-item">
+                                        <h4>Schritt 6: Markers dynamisch setzen</h4>
+                                        <p>
+                                            <pre>
+function setMarkers(map, locations) {
+    var infowindow = new google.maps.InfoWindow({
+        content: ""
+    });
+    var i, location, myLatLng, marker;
+    for (i = 0; i < locations.length; i++) {
+        location = locations[i];
+        myLatLng = new google.maps.LatLng(location[1], location[2]);
+        marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: location[0],
+            zIndex: location[3]
+        });
+        bounds.extend(marker.getPosition());
+        bindInfoWindow(marker, map, infowindow, location[0]);
+    }
+}</pre>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-group-item">
+                                        <h4>Schritt 7: Map initialisieren</h4>
+                                        <pre>
+function initialize() {
+    var mapOptions = {
+        zoom: 10,
+        center: new google.maps.LatLng(47.567827, 9.1212743),
+        /*panControl: false,
+        disableDefaultUI: true,
+        zoomControl: true,
+        scrollwheel: false,
+        panControl: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP*/
+    };
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    setMarkers(map, locations);
+    map.fitBounds(bounds);
+}</pre>
+                                        <p>Latitude/Longitude habe ich durch ausprobieren herausgefunden</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-group-item">
+                                        <h4>Schritt 8: Map Event-Listener hinzufügen</h4>
+                                        <p>Damit die Map bei jedem resizen und reloaden nochmals gezeichnet wird:</p>
+                                        <pre>
+google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'resize', initialize);</pre>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-group-item">
+                                        <h4>Letzer Schritt: Map anzeigen</h4>
+                                        <p>Zum Schluss noch anzeigen:</p>
+                                        <pre>
+window.onpopstate = initialize();</pre>
                                     </div>
                                 </ul>
                             </div>
