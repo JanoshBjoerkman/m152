@@ -1,10 +1,15 @@
 body
 {
+    font-family: 'Montserrat', sans-serif;
     padding-top: 60px; // navbar-fixed-top overlays content -> add padding
     &.no-padding
     {
         padding-top: 50px;
     }
+}
+
+h1{
+    font-family: 'Montserrat', 'light';
 }
 
 // space between bootstrap rows
@@ -17,14 +22,14 @@ body
     }
 }
 
-// for contact form
+// contact form
 .contact_form_wrapper
 {
     margin-left: 10px;
     margin-right: 10px;
 }
 
-// for shops -> map
+// shops -> map
 .map-container{
     position: relative;
     width: 100%;
@@ -44,16 +49,16 @@ body
     margin-bottom: 50px;
 }
 
-// for about-page
+// about-page
 .bg-1
 {
-    background-color: #FFFAC3;
-    color: #1B251C;
+    background-color: #5acc9a;
+    color: #3f3f3f;
 }
 
 .bg-2 
 { 
-    background-color: #474e5d;
+    background-color: #545254;
     color: #ffffff;
 }
 .bg-3 
@@ -80,3 +85,20 @@ body
         overflow: hidden;
     }
 }
+
+// spots -> panels
+.panel-default > .panel-heading {
+    color: #ffffff;
+    background-color: #545254e7;
+    border-color: #5acc9a;
+    a{
+        color: #5acc9a;
+    }
+}
+
+// contact from
+.btn-default{
+    color: #5acc9a;
+    background-color: #545254;
+}
+

@@ -1,74 +1,73 @@
-/* navbar */
-
-
-/* other */
-
 body {
-    padding-top: 60px;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 60px;
 }
-
 body.no-padding {
-    padding-top: 50px;
+  padding-top: 50px;
 }
-
+h1 {
+  font-family: 'Montserrat', 'light';
+}
 .top-buffer {
-    margin-top: 1%;
+  margin-top: 1%;
 }
-
 .top-buffer div {
-    margin-top: 1%;
+  margin-top: 1%;
 }
-
 .contact_form_wrapper {
-    margin-left: 10px;
-    margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-
 .map-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
 }
-
-.map-container>* {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    margin-bottom: 50px;
+.map-container > * {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 50px;
 }
-
 .bg-1 {
-    background-color: #FFFAC3;
-    color: #1B251C;
+  background-color: #5acc9a;
+  color: #3f3f3f;
 }
-
 .bg-2 {
-    background-color: #474e5d;
-    color: #ffffff;
+  background-color: #545254;
+  color: #ffffff;
 }
-
 .bg-3 {
-    background-color: #ffffff;
-    color: #555555;
+  background-color: #ffffff;
+  color: #555555;
 }
-
 .about-img {
-    max-width: 100%;
-    padding: 1em;
+  max-width: 100%;
+  padding: 1em;
 }
-
-.about-img>img {
-    width: 100%;
+.about-img > img {
+  width: 100%;
 }
-
 .about-img img {
-    overflow: hidden;
+  overflow: hidden;
+}
+.panel-default > .panel-heading {
+  color: #ffffff;
+  background-color: #545254e7;
+  border-color: #5acc9a;
+}
+.panel-default > .panel-heading a {
+  color: #5acc9a;
+}
+.btn-default {
+  color: #5acc9a;
+  background-color: #545254;
 }
