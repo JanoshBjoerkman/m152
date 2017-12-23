@@ -18,6 +18,10 @@ h1 {
   margin-left: 10px;
   margin-right: 10px;
 }
+.btn-default {
+  color: #5acc9a;
+  background-color: #545254;
+}
 .map-container {
   position: relative;
   width: 100%;
@@ -66,8 +70,4 @@ h1 {
 }
 .panel-default > .panel-heading a {
   color: #5acc9a;
-}
-.btn-default {
-  color: #5acc9a;
-  background-color: #545254;
 }
