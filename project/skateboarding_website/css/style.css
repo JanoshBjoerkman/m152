@@ -11,6 +11,10 @@ body .text-green {
 h1 {
   font-family: 'Montserrat', 'light';
 }
+.logo {
+  width: 30px;
+  height: auto;
+}
 .top-buffer {
   margin-top: 1%;
 }
